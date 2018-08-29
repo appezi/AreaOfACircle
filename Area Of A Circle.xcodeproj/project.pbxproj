@@ -15,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15422332882090C16B4B27D1 /* Pods-Area Of A Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Area Of A Circle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Area Of A Circle/Pods-Area Of A Circle.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB59955234BD6E966A4A93C /* Pods-Area Of A Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Area Of A Circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Area Of A Circle/Pods-Area Of A Circle.release.xcconfig"; sourceTree = "<group>"; };
 		C1AF4E4221355599000EC3FD /* Area Of A Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Area Of A Circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AF4E4521355599000EC3FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AF4E4721355599000EC3FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,11 +37,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04994C98F4E733D9B110230A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F5E477357A10688438D33C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15422332882090C16B4B27D1 /* Pods-Area Of A Circle.debug.xcconfig */,
+				5FB59955234BD6E966A4A93C /* Pods-Area Of A Circle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C1AF4E3921355599000EC3FD = {
 			isa = PBXGroup;
 			children = (
 				C1AF4E4421355599000EC3FD /* Area Of A Circle */,
 				C1AF4E4321355599000EC3FD /* Products */,
+				9F5E477357A10688438D33C0 /* Pods */,
+				04994C98F4E733D9B110230A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1AF4E542135559D000EC3FD /* Build configuration list for PBXNativeTarget "Area Of A Circle" */;
 			buildPhases = (
+				674C7C0241C1569C7A53B5B2 /* [CP] Check Pods Manifest.lock */,
 				C1AF4E3E21355599000EC3FD /* Sources */,
 				C1AF4E3F21355599000EC3FD /* Frameworks */,
 				C1AF4E4021355599000EC3FD /* Resources */,
@@ -129,6 +150,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		674C7C0241C1569C7A53B5B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Area Of A Circle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1AF4E3E21355599000EC3FD /* Sources */ = {
@@ -278,10 +320,15 @@
 		};
 		C1AF4E552135559D000EC3FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15422332882090C16B4B27D1 /* Pods-Area Of A Circle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4862JPL5K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Area\\ Of\\ A\\ Circle",
+				);
 				INFOPLIST_FILE = "Area Of A Circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,10 +343,15 @@
 		};
 		C1AF4E562135559D000EC3FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB59955234BD6E966A4A93C /* Pods-Area Of A Circle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4862JPL5K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Area\\ Of\\ A\\ Circle",
+				);
 				INFOPLIST_FILE = "Area Of A Circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
